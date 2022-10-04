@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="newrecords item">
+                <tr>
+                    <td><input type="text" name="name" id="name" placeholder="Enter your name.." autocomplete="on"></td>
+                    <td><input type="number" name="age" id="age" placeholder="Enter your age.." autocomplete="on"></td>
+                    <td><input type="number" name="mark" id="mark" placeholder="Enter your mark.." autocomplete="on">
+                    </td>
+                    <td><button type="button" value="+" id="add" onclick="addmore()">+</button></td>
+                </tr>
+        </div>
+        <div class="records item"></div>
+        <div class="submit item">
+            <button type="submit" id="submit" onclick="viewrecords(1)">SUBMIT</button>
+            <button type="submit" id="clear" onclick="clearTask()">CLEAR</button>
+        </div>
+    </div>
+    <div class="paginationtable" id="paginationtable">
+        <div class="mytable">
+            <table border=1>
+                <tr>
+                    <th><input type="submit" value="NAME" class="sortbyname btn" onclick="sortbyname()"></th>
+                    <th><input type="submit" value="AGE" class="sortbyage btn" onclick="sortbyage()"></th>
+                    <th><input type="submit" value="MARK" class="sortbymark btn" onclick="sortbymark()"></th>
+                </tr>
+                <tbody id="tb"></tbody>
+            </table>
+        </div>
+        <div class="paginationcontainer">
+            <button class="prevButton" onclick="goPrevious()">PREV</button>
+            <div  class="pagenumbers" id="pagination"></div>
+            <button class="nextButton" onclick="goNext()">NEXT</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
